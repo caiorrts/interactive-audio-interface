@@ -90,6 +90,9 @@ sliderTime.addEventListener("click", changeTime);
 audio.addEventListener("timeupdate", function() {
     timeUpdate();
 });
+audio.addEventListener("ended", function() {
+    autoSwitchSong();
+});
 
 
 // FUNCTIONS
@@ -189,4 +192,16 @@ function timeUpdate() {
         iniTime.innerHTML = "00:00";
         endTime.innerHTML = "00:00";
     }
+}
+
+function autoSwitchSong() {
+
+    if (randomStatus) {
+        list_index = Math.floor(Math.random() * list.length);
+    }else if (list_index == (list.length - 1)){
+        list_index = 0;
+    } else {
+        list_index++;
+    }
+    changeMusic();
 }
