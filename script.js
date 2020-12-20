@@ -79,9 +79,26 @@ listArtist.innerHTML = artist[list_index];
 
 // LISTENING EVENTS
 btnPlay.addEventListener("click", playPause);
+btnNext.addEventListener("click", nextSong);
+btnPrev.addEventListener("click", prevSong);
 
 
 // FUNCTIONS
+function changeMusic(){
+    // Images
+    btnPlay.style.backgroundImage = "url('icons/btn-pause.png')";
+    bgCover.style.backgroundImage = "url('" + cover[list_index] + "')";
+    playCover.style.backgroundImage = "url('" + cover[list_index] + "')";
+    
+    // Artist and Song Text
+    listArtist.innerHTML = artist[list_index];
+    listSong.innerHTML = song[list_index];
+    
+    // Song
+    audio.src = list[list_index];
+    audio.play();
+}
+
 function playPause() {
     if(audio.paused) {
         audio.play();
@@ -90,4 +107,20 @@ function playPause() {
         audio.pause();
         btnPlay.style.backgroundImage = "url('icons/btn-play.png')";
     }
+}
+
+function nextSong() {
+    list_index++;
+    if(list_index > list.length - 1) {
+        list_index = 0;
+    }
+    changeMusic();
+}
+
+function prevSong() {
+    list_index--;
+    if(list_index < 0) {
+        list_index = list.length - 1;
+    }
+    changeMusic();
 }
