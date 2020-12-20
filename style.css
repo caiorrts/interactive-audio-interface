@@ -1,0 +1,31 @@
+/** CSS RESET **/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+/** UTILITY STYLES **/
+body {
+    background-color: #181818;
+    font-family: 'Roboto', sans-serif;    
+}
+
+main {
+    display: grid;
+    place-items: center;
+    height: 100vh;
+    width: 100vw;
+}
+
+#bgcover {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    background-image: url(covers/pearljam.jpg);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;    
+    filter: blur(10px);
+    opacity: 0.6;
+}
