@@ -68,6 +68,7 @@ playCover  = document.getElementById("player__cover__image");
 // STARTS THE AUDIO OBJECT AND LOADS THE FIRST SONG
 audio = new Audio();
 list_index = 0
+randomStatus = false;
 audio.loop = false;
 audio.volume = sliderVol.value / 100;
 audio.src = list[list_index];
@@ -81,6 +82,8 @@ listArtist.innerHTML = artist[list_index];
 btnPlay.addEventListener("click", playPause);
 btnNext.addEventListener("click", nextSong);
 btnPrev.addEventListener("click", prevSong);
+btnLoop.addEventListener("click", loop);
+btnRandom.addEventListener("click", random);
 btnMute.addEventListener("click", mute);
 sliderVol.addEventListener("mousemove", setVolume);
 audio.addEventListener("timeupdate", function() {
@@ -128,6 +131,26 @@ function prevSong() {
         list_index = list.length - 1;
     }
     changeMusic();
+}
+
+function loop() {
+    if(audio.loop) {
+        audio.loop = false;
+        btnLoop.style.color = "#FFF";
+    } else {
+        audio.loop = true;
+        btnLoop.style.color = "#FF0069";
+    }
+}
+
+function random() {
+    if (randomStatus) {
+        randomStatus = false;
+        btnRandom.style.color = "#FFF";
+    } else {
+        randomStatus = true;
+        btnRandom.style.color = "#FF0069";
+    }
 }
 
 function setVolume() {
