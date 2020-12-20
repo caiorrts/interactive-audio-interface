@@ -83,6 +83,9 @@ btnNext.addEventListener("click", nextSong);
 btnPrev.addEventListener("click", prevSong);
 btnMute.addEventListener("click", mute);
 sliderVol.addEventListener("mousemove", setVolume);
+audio.addEventListener("timeupdate", function() {
+    timeUpdate();
+});
 
 
 // FUNCTIONS
@@ -138,5 +141,24 @@ function mute(){
     } else {
         audio.muted = true;
         btnMute.style.backgroundImage = "url('icons/btn-mute-on.png')";
+    }
+}
+
+function timeUpdate() {
+    if(audio.duration) {
+        sliderTime.value = audio.currentTime * (100 / audio.duration);
+        let mins = Math.floor(audio.currentTime / 60);
+        let secs = Math.floor(audio.currentTime - mins * 60);
+        let minsTot = Math.floor(audio.duration / 60);
+        let secsTot = Math.floor(audio.duration - minsTot * 60);
+        if(secs < 10){ secs = "0" + secs}
+        if(secsTot < 10){ secs = "0" + secsTot}
+        if(mins < 10){ mins = "0" + mins}
+        if(secsTot < 10){ secsTot = "0" + secsTot}
+        iniTime.innerHTML = mins+":"+secs;
+        endTime.innerHTML = minsTot+":"+secsTot;
+    } else {
+        iniTime.innerHTML = "00:00";
+        endTime.innerHTML = "00:00";
     }
 }
