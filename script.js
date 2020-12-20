@@ -61,3 +61,17 @@ listSong   = document.getElementById("player__info__song");
 listArtist = document.getElementById("player__info__artist");
 iniTime    = document.getElementById("player__time__info__ini");
 endTime    = document.getElementById("player__time__info__end");
+bgCover    = document.getElementById("bgcover");
+playCover  = document.getElementById("player__cover__image");
+
+
+// STARTS THE AUDIO OBJECT AND LOADS THE FIRST SONG
+audio = new Audio();
+list_index = 0
+audio.loop = false;
+audio.volume = sliderVol.value / 100;
+audio.src = list[list_index];
+bgCover.style.backgroundImage = "url('" + cover[list_index] + "')";
+playCover.style.backgroundImage = "url('" + cover[list_index] + "')";
+listSong.innerHTML = song[list_index];
+listArtist.innerHTML = artist[list_index];

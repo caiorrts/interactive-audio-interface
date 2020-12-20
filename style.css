@@ -200,7 +200,7 @@ main {
     background-repeat: no-repeat;
 }
 
-#player__control__buttons__play-pause {
+#player__control__buttons__play {
     background-image: url(icons/btn-play.png);
     background-size: cover;
 }
