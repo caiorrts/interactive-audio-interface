@@ -144,6 +144,8 @@ function loop() {
     } else {
         audio.loop = true;
         btnLoop.style.color = "#FF0069";
+        randomStatus = false;
+        btnRandom.style.color = "#FFF";
     }
 }
 
@@ -154,6 +156,8 @@ function random() {
     } else {
         randomStatus = true;
         btnRandom.style.color = "#FF0069";
+        audio.loop = false;
+        btnLoop.style.color = "#FFF";
     }
 }
 
