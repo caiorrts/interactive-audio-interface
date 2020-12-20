@@ -84,8 +84,9 @@ btnNext.addEventListener("click", nextSong);
 btnPrev.addEventListener("click", prevSong);
 btnLoop.addEventListener("click", loop);
 btnRandom.addEventListener("click", random);
-btnMute.addEventListener("click", mute);
 sliderVol.addEventListener("mousemove", setVolume);
+btnMute.addEventListener("click", mute);
+sliderTime.addEventListener("click", changeTime);
 audio.addEventListener("timeupdate", function() {
     timeUpdate();
 });
@@ -165,6 +166,10 @@ function mute(){
         audio.muted = true;
         btnMute.style.backgroundImage = "url('icons/btn-mute-on.png')";
     }
+}
+
+function changeTime() {
+    audio.currentTime = (audio.duration * sliderTime.value) / 100;
 }
 
 function timeUpdate() {
