@@ -48,7 +48,7 @@ cover = [
     "covers/thestrokes.jpg"];
 
 
-//OBJECT REFERENCES
+// OBJECT REFERENCES
 btnPlay    = document.getElementById("player__control__buttons__play");
 btnNext    = document.getElementById("player__control__buttons__next");
 btnPrev    = document.getElementById("player__control__buttons__prev");
@@ -75,3 +75,19 @@ bgCover.style.backgroundImage = "url('" + cover[list_index] + "')";
 playCover.style.backgroundImage = "url('" + cover[list_index] + "')";
 listSong.innerHTML = song[list_index];
 listArtist.innerHTML = artist[list_index];
+
+
+// LISTENING EVENTS
+btnPlay.addEventListener("click", playPause);
+
+
+// FUNCTIONS
+function playPause() {
+    if(audio.paused) {
+        audio.play();
+        btnPlay.style.backgroundImage = "url('icons/btn-pause.png')";
+    } else {
+        audio.pause();
+        btnPlay.style.backgroundImage = "url('icons/btn-play.png')";
+    }
+}
