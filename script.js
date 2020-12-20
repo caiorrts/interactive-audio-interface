@@ -81,6 +81,8 @@ listArtist.innerHTML = artist[list_index];
 btnPlay.addEventListener("click", playPause);
 btnNext.addEventListener("click", nextSong);
 btnPrev.addEventListener("click", prevSong);
+btnMute.addEventListener("click", mute);
+sliderVol.addEventListener("mousemove", setVolume);
 
 
 // FUNCTIONS
@@ -123,4 +125,18 @@ function prevSong() {
         list_index = list.length - 1;
     }
     changeMusic();
+}
+
+function setVolume() {
+    audio.volume = sliderVol.value / 100;
+}
+
+function mute(){
+    if(audio.muted){
+        audio.muted = false;
+        btnMute.style.backgroundImage = "url('icons/btn-mute.png')";
+    } else {
+        audio.muted = true;
+        btnMute.style.backgroundImage = "url('icons/btn-mute-on.png')";
+    }
 }
