@@ -37,6 +37,10 @@ main {
     background-repeat: no-repeat;    
     filter: blur(10px);
     opacity: 0.6;
+    transition: all .5s linear;
+    transition-duration: .5s;
+    transition-timing-function: ease-in;
+
 }
 
 
@@ -49,6 +53,7 @@ main {
     width: 600px;
     min-width: 600px;
     height: 700px;
+    margin-top: -100px;
 }
 
 .player__bg {
@@ -79,6 +84,12 @@ main {
     background-size: auto 110%;
     background-position: center center;
     background-repeat: no-repeat;
+    transition: all .5s ease-in-out;
+}
+
+#player__cover__image:hover {
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    background-size: auto 114%;
 }
 
 
