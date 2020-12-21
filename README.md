@@ -70,5 +70,3 @@ Obs.: Compatibility process with other browsers still under development.
 * [w3schools](https://www.w3schools.com/jsref/dom_obj_audio.asp) - HTML DOM Audio Object
 * [Notion - Article](https://www.notion.so/Media-Audio-5e2880fac3f44fd297af96c7ca14ddb9) - Media Audio
 * [Medium - Article](https://medium.com/@melwinalm/crcreating-keyboard-shortcuts-in-javascripteating-keyboard-shortcuts-in-javascript-763ca19beb9e) - Creating Keyboard Shortcuts in JavaScript
-
-Updating music and images to royalty free files
