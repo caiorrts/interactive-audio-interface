@@ -111,26 +111,26 @@ audio.addEventListener("ended", function() {
 document.onkeydown = function(e) {
     let key = e.which || e.keyCode; 
     
-    // Play / Pause
+    // Play/Pause (space)
     if (key == 32) { playPause(); }
-    // Next Song
+    // Next Song (→)
     if (key == 39) { nextSong(); }
-    // Previous Song
+    // Previous Song (←)
     if (key == 37) { prevSong(); }
-    // Forward Track 
+    // Forward Track (F)
     if (key == 70) { audio.currentTime += 10; }
-    // Backward Track 
+    // Backward Track (B)
     if (key == 66) { audio.currentTime -= 10; }
-    // Loop On/Off
+    // Loop On/Off (L)
     if (key == 76) { loop(); }
-    // Random On/Off
+    // Random On/Off (R)
     if (key == 82) { random(); }
-    // Mute On/Off
+    // Mute On/Off (M)
     if (key == 77) { mute(); }
-    // Maximum Volume
+    // Maximum Volume (V)
     if (key == 86) { maxVolume(); }
     
-    // Volume Up
+    // Volume Up (↑)
     if (key == 38) {
         if (sliderVol.value < 100) {
             indexVol += 10;
@@ -141,7 +141,7 @@ document.onkeydown = function(e) {
         }
     }
     
-    // Volume Down
+    // Volume Down (↓)
     if (key == 40) {       
         if (sliderVol.value > 0) {
             indexVol -= 10;
