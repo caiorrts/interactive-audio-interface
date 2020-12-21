@@ -1,3 +1,11 @@
+// VARIABLES
+let btnPlay, btnNext, btnPrev, btnMute, btnVolMax, btnLoop, btnRandom; //buttons
+let sliderTime, sliderVol; //sliders
+let listSong, listArtist, iniTime, endTime; //texts
+let bgCover, playCover; //images
+var indexVol = 50;
+var indexTime = 50;
+
 // ARRAYS OF MUSIC FILES, TITTLE SONGS, ARTIST NAMES AND COVER PICTURES
 list = [
     "audio/ACDC - Highway to Hell.mp3",
@@ -70,6 +78,7 @@ playCover  = document.getElementById("player__cover__image");
 audio = new Audio();
 list_index = 0
 audioTrack = 0;
+sliderVol.value = 50;
 randomStatus = false;
 audio.loop = false;
 audio.volume = sliderVol.value / 100;
@@ -96,6 +105,53 @@ audio.addEventListener("timeupdate", function() {
 audio.addEventListener("ended", function() {
     autoSwitchSong();
 });
+
+
+// KEYBOARD SHORTCUTS
+document.onkeydown = function(e) {
+    let key = e.which || e.keyCode; 
+    
+    // Play / Pause
+    if (key == 32) { playPause(); }
+    // Next Song
+    if (key == 39) { nextSong(); }
+    // Previous Song
+    if (key == 37) { prevSong(); }
+    // Forward Track 
+    if (key == 70) { audio.currentTime += 10; }
+    // Backward Track 
+    if (key == 66) { audio.currentTime -= 10; }
+    // Loop On/Off
+    if (key == 76) { loop(); }
+    // Random On/Off
+    if (key == 82) { random(); }
+    // Mute On/Off
+    if (key == 77) { mute(); }
+    // Maximum Volume
+    if (key == 86) { maxVolume(); }
+    
+    // Volume Up
+    if (key == 38) {
+        if (sliderVol.value < 100) {
+            indexVol += 10;
+            sliderVol.value = indexVol;
+            audio.volume = sliderVol.value / 100;
+        } else {
+            indexVol = 100;
+        }
+    }
+    
+    // Volume Down
+    if (key == 40) {       
+        if (sliderVol.value > 0) {
+            indexVol -= 10;
+            sliderVol.value = indexVol;
+            audio.volume = sliderVol.value / 100;
+        } else {
+            indexVol = 0;
+        }
+    }
+};
 
 
 // FUNCTIONS
@@ -212,7 +268,6 @@ function timeUpdate() {
 }
 
 function autoSwitchSong() {
-
     if (randomStatus) {
         list_index = Math.floor(Math.random() * list.length);
     }else if (list_index == (list.length - 1)){

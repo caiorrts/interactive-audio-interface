@@ -9,14 +9,18 @@
     Jesse Mykolyn | Tools and Workflow for the Web
     Rocco Panacci | Applied Web Design / Applied Web Programming 
 
-## Built With:
-* HTML
-* CSS
-* JavaScript Vanilla
+## Usage
+&euro;
+
 
 ## Compatibility:
 # * Only works with chrome browser.
 Obs.: Compatibility process with other browsers still under development.
+
+## Built With:
+* HTML
+* CSS
+* JavaScript Vanilla
 
 ## Resources:
 * [w3schools](https://www.w3schools.com/jsref/dom_obj_audio.asp)
