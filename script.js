@@ -8,52 +8,44 @@ var indexTime = 50;
 
 // ARRAYS OF MUSIC FILES, TITTLE SONGS, ARTIST NAMES AND COVER PICTURES
 list = [
-    "audio/ACDC - Highway to Hell.mp3",
-    "audio/Audioslave - Show Me How To Live.mp3",
-    "audio/Foo Fighters - Walk.mp3",
-    "audio/Incubus - Megalomaniac.mp3",
-    "audio/Jet - Are You Gonna Be My Girl.mp3",
-    "audio/Linkin Park - One Step Closer.mp3",
-    "audio/OneRepublic - Stop And Stare.mp3",
-    "audio/Papa Roach - Last Resort.mp3",
-    "audio/Pearl Jam - Alive.mp3",
-    "audio/The Strokes - Last Nite.mp3"];
+    "audio/bensound-actionable.mp3",
+    "audio/bensound-anewbeginning.mp3",
+    "audio/bensound-beyondtheline.mp3",
+    "audio/bensound-goinghigher.mp3",
+    "audio/bensound-happyrock.mp3",
+    "audio/bensound-highoctane.mp3",
+    "audio/bensound-punky.mp3",
+    "audio/bensound-rumble.mp3"];
 
 song = [
-    "Highway to Hell",
-    "Show Me How To Live",
-    "Walk",
-    "Megalomaniac",
-    "Are You Gonna Be My Girl",
-    "One Step Closer",
-    "Stop And Stare",
-    "Last Resort",
-    "Alive",
-    "Last Nite"];
+    "Actionable.mp3",
+    "A New Beginning.mp3",
+    "Beyond The Line.mp3",
+    "Going Higher.mp3",
+    "Happy Rock.mp3",
+    "High Octane.mp3",
+    "Punky.mp3",
+    "Rumble.mp3"];
 
 artist = [
-    "AC/DC",
-    "Audioslave",
-    "Foo Fighters",
-    "Incubus",
-    "Jet",
-    "Linkin Park",
-    "OneRepublic",
-    "Papa Roach",
-    "Pearl Jam",
-    "The Strokes"];
+    "Bensound 01",
+    "Bensound 02",
+    "Bensound 03",
+    "Bensound 04",
+    "Bensound 05",
+    "Bensound 06",
+    "Bensound 07",
+    "Bensound 08"];
 
 cover = [
-    "covers/acdc.jpg",
-    "covers/audioslave.jpg",
-    "covers/foofighters.jpg",
-    "covers/incubus.jpg",
-    "covers/jet.jpg",
-    "covers/linkinpark.jpg",
-    "covers/onerepublic.jpg",
-    "covers/paparoach.jpg",
-    "covers/pearljam.jpg",
-    "covers/thestrokes.jpg"];
+    "covers/cover01.jpg",
+    "covers/cover02.jpg",
+    "covers/cover03.jpg",
+    "covers/cover04.jpg",
+    "covers/cover05.jpg",
+    "covers/cover06.jpg",
+    "covers/cover07.jpg",
+    "covers/cover08.jpg"];
 
 
 // OBJECT REFERENCES
