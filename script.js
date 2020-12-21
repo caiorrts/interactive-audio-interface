@@ -53,6 +53,7 @@ btnPlay    = document.getElementById("player__control__buttons__play");
 btnNext    = document.getElementById("player__control__buttons__next");
 btnPrev    = document.getElementById("player__control__buttons__prev");
 btnMute    = document.getElementById("player__control__volume__mute");
+btnVolMax  = document.getElementById("player__control__volume__max");
 btnLoop    = document.getElementById("player__time__loop");
 btnRandom  = document.getElementById("player__time__random");
 sliderTime = document.getElementById("player__time__info__bar");
@@ -68,6 +69,7 @@ playCover  = document.getElementById("player__cover__image");
 // STARTS THE AUDIO OBJECT AND LOADS THE FIRST SONG
 audio = new Audio();
 list_index = 0
+audioTrack = 0;
 randomStatus = false;
 audio.loop = false;
 audio.volume = sliderVol.value / 100;
@@ -86,6 +88,7 @@ btnLoop.addEventListener("click", loop);
 btnRandom.addEventListener("click", random);
 sliderVol.addEventListener("mousemove", setVolume);
 btnMute.addEventListener("click", mute);
+btnVolMax.addEventListener("click", maxVolume);
 sliderTime.addEventListener("click", changeTime);
 audio.addEventListener("timeupdate", function() {
     timeUpdate();
@@ -169,10 +172,20 @@ function mute(){
     if(audio.muted){
         audio.muted = false;
         btnMute.style.backgroundImage = "url('icons/btn-mute.png')";
+        sliderVol.value = audioTrack;
     } else {
         audio.muted = true;
         btnMute.style.backgroundImage = "url('icons/btn-mute-on.png')";
+        audioTrack = sliderVol.value;
+        sliderVol.value = 0;
     }
+}
+
+function maxVolume() {
+    audio.volume = 1.0;
+    sliderVol.value = 100;
+    audio.muted = false;
+    btnMute.style.backgroundImage = "url('icons/btn-mute.png')";
 }
 
 function changeTime() {
