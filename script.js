@@ -18,14 +18,14 @@ list = [
     "audio/bensound-rumble.mp3"];
 
 song = [
-    "Actionable.mp3",
-    "A New Beginning.mp3",
-    "Beyond The Line.mp3",
-    "Going Higher.mp3",
-    "Happy Rock.mp3",
-    "High Octane.mp3",
-    "Punky.mp3",
-    "Rumble.mp3"];
+    "Actionable",
+    "A New Beginning",
+    "Beyond The Line",
+    "Going Higher",
+    "Happy Rock",
+    "High Octane",
+    "Punky",
+    "Rumble"];
 
 artist = [
     "Bensound 01",
