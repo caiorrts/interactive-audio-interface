@@ -15,44 +15,44 @@ Rocco Panacci | Applied Web Design / Applied Web Programming
 
 ## Usage
 ```
-**space** = play/pause
+space = play/pause
 ```
 ```
-**←** = previous song
+← = previous song
 ```
 ```
-**→** = next song
+→ = next song
 ```
 ```
-**F** = advance the music in 10 seconds
+F = advance the music in 10 seconds
 ```
 ```
-**B** = delay music by 10 seconds
+B = delay music by 10 seconds
 ```
 ```
-**↑** = volume up
+↑ = volume up
 ```
 ```
-**↓** = volume down
+↓ = volume down
 ```
 ```
-**M** = mute volume
+M = mute volume
 ```
 ```
-**V** = maximum volume
+V = maximum volume
 ```
 ```
-**L** = loop on/off
+L = loop on/off
 ```
 ```
-**R** = random on/off
+R = random on/off
 ```
 
 ## Compatibility:
-```
 * **Only works with chrome browser.**
 ```
 Obs.: Compatibility process with other browsers still under development.
+```
 
 ## Built With:
 * HTML
